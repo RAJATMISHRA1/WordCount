@@ -41,7 +41,7 @@ func WordCount(fileName string) string {
 	}
 
 	// sort wordCount slice
-	sort.Slice(wordCounts, func(i, j int) bool {
+	sort.SliceStable(wordCounts, func(i, j int) bool {
 		return m[wordCounts[i]] > m[wordCounts[j]]
 	})
 
